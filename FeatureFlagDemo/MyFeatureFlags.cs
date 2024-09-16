@@ -1,9 +1,5 @@
-﻿// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-//
-namespace FeatureFlagDemo
+﻿namespace FeatureFlagDemo
 {
-    //
     // Define feature flags in an enum
     static class MyFeatureFlags
     {

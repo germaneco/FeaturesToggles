@@ -1,7 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-//
-namespace FeatureFlagDemo.FeatureManagement.FeatureFilters
+﻿namespace FeatureFlagDemo.FeatureManagement.FeatureFilters
 {
     public class BrowserFilterSettings
     {

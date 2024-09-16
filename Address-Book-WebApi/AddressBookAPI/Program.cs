@@ -36,7 +36,7 @@ namespace AddressBookAPI
             builder.Services.AddScoped<MyMapper>();
 
             // Configuring Entity Framework
-            builder.Services.AddDbContext<dbcontext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddDbContext<AddressBoookContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
