@@ -1,7 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-//
-using FeatureFlagDemo.Authentication;
+﻿using FeatureFlagDemo.Authentication;
 using FeatureFlagDemo.FeatureManagement;
 using FeatureFlagDemo.FeatureManagement.FeatureFilters;
 using Microsoft.AspNetCore.Mvc;

@@ -1,7 +1,4 @@
-﻿// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-//
-using Microsoft.FeatureManagement;
+﻿using Microsoft.FeatureManagement;
 
 namespace FeatureFlagDemo.FeatureManagement.FeatureFilters
 {

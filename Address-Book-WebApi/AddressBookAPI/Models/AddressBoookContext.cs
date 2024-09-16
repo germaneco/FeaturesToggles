@@ -2,9 +2,9 @@
 
 namespace AddressBookAPI.Models
 {
-    public class dbcontext : DbContext
+    public class AddressBoookContext : DbContext
     {
-        public dbcontext(DbContextOptions<dbcontext> options) : base(options)
+        public AddressBoookContext(DbContextOptions<AddressBoookContext> options) : base(options)
         {
         }
 
