@@ -8,9 +8,9 @@ namespace AddressBookAPI.Services
     public class ContactService : IContactService
     {
         private readonly MyMapper _mymapper;
-        private readonly dbcontext _dbcontext;
+        private readonly AddressBoookContext _dbcontext;
 
-        public ContactService(MyMapper mymapper, dbcontext context)
+        public ContactService(MyMapper mymapper, AddressBoookContext context)
         {
             _mymapper = mymapper;
             _dbcontext = context;
