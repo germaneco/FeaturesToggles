@@ -10,9 +10,6 @@ namespace AddressBookAPI.Controllers
     public class FeatureController(IFeatureManager featureManager) : ControllerBase
     {
         [HttpGet]
-        public async Task<bool> IsFeatureEnabled(string feature)
-        {
-            return await featureManager.IsEnabledAsync(feature);
-        }
+        public async Task<IActionResult> IsFeatureEnabled(string feature) => Ok(await featureManager.IsEnabledAsync(feature));
     }
 }

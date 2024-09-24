@@ -2,6 +2,7 @@ using AddressBookAPI.Mappers;
 using AddressBookAPI.Models;
 using AddressBookAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.FeatureManagement;
 
 namespace AddressBookAPI
 {
@@ -34,6 +35,8 @@ namespace AddressBookAPI
             // Add services to the container.
             builder.Services.AddTransient<IContactService, ContactService>();
             builder.Services.AddScoped<MyMapper>();
+
+            builder.Services.AddFeatureManagement();
 
             // Configuring Entity Framework
             builder.Services.AddDbContext<AddressBoookContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

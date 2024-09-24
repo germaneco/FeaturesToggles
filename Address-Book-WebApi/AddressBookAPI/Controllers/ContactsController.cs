@@ -2,6 +2,7 @@
 using AddressBookAPI.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.FeatureManagement.Mvc;
 
 namespace AddressBookAPI.Controllers
 {
@@ -17,12 +18,14 @@ namespace AddressBookAPI.Controllers
             _contactService = contactService;
         }
 
+        [FeatureGate(MyFeatureFlags.GetContacsEndpoint)]
         [HttpGet]
         public async Task<IActionResult> AllContacts()
         {
             return Ok(await _contactService.GetAllContacts());
         }
 
+        [FeatureGate(MyFeatureFlags.GetContactByIdEndpoint)]
         [HttpGet("{id}")]
         public async Task<IActionResult> ContactById(int id)
         {
@@ -35,6 +38,7 @@ namespace AddressBookAPI.Controllers
             return Ok(contact);
         }
 
+        [FeatureGate(MyFeatureFlags.CreateContactEndpoint)]
         [HttpPost]
         public async Task<IActionResult> CreateContact([FromBody] ContactDTO newContact)
         {
@@ -53,6 +57,7 @@ namespace AddressBookAPI.Controllers
             return Ok(contact);
         }
 
+        [FeatureGate(MyFeatureFlags.UpdateContactEndpoint)]
         [HttpPut]
         public async Task<IActionResult> UpdateContact([FromBody] ContactDTO updateContact)
         {
@@ -70,6 +75,7 @@ namespace AddressBookAPI.Controllers
             return Ok(contact);
         }
 
+        [FeatureGate(MyFeatureFlags.DeleteContactEndpoint)]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteContact(int id)
         {
